@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:travel_app_ui/moduls/dashboard/view/dashboard_view.dart';
+import 'package:travel_app_ui/utils/color_convert.dart';
 import 'package:travel_app_ui/utils/utils.dart';
 
 class OnBoardView extends StatelessWidget {
@@ -18,30 +19,32 @@ class OnBoardView extends StatelessWidget {
           height: Get.height,
           width: Get.width,
           child: ListView(
+            shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             children: [
               const SizedBox(height: 20,),
           SizedBox(
-                  height: 200,
+                  height: Get.height/3,
                   child: Image.asset('assets/images/splash.png',fit: BoxFit.fitHeight,),
                 ),
 
 
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
+                    horizontal: 30,
                     vertical: 20
                   ),
                   child: Container(
-                    height: 320,
+                    height: Get.height/2,
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: colorConvert('EFF4FF'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow:kElevationToShadow[2],
                         
                       
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
                           height: 250,
@@ -122,6 +125,9 @@ class OnBoardView extends StatelessWidget {
                             
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          height: 10,
                         )
                       ],
                     ),

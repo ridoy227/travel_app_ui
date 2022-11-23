@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app_ui/moduls/home/view/home_screen.dart';
+import 'package:travel_app_ui/utils/color_convert.dart';
 
 class DashBoardView extends StatelessWidget {
   const DashBoardView({super.key});
@@ -9,9 +10,9 @@ class DashBoardView extends StatelessWidget {
     return Scaffold(
        bottomNavigationBar: Container(
         height: 80,
-        decoration:const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          color: colorConvert('FFFFFF'),
+          borderRadius:const BorderRadius.only(
             topLeft: Radius.circular(15),
             topRight:  Radius.circular(15)
           )
